@@ -1,7 +1,6 @@
 import EntriesCard from "@/components/entries-card";
 import Post from "@/interfaces/post";
 import { client } from "@/lib/client";
-import { Metadata } from "next/types";
 
 type Props = {
   params: {
@@ -33,7 +32,7 @@ export default async function EntriesCategory({ params }: Props) {
   );
 }
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata({ params }: Props) {
   const { slug } = params;
 
   return {
